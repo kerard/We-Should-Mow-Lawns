@@ -5,7 +5,7 @@ $SearchBaseOU = "OU=hurp,OU=durp,OU=twiddly,DC=derrmain,DC=dotlocal"
 $SearchForThisName = "squanch*"
 
 # Recursively parse the $SearchBaseOU OU for computer objects, return only their name (no header) using "ExpandProperty", and sort alphabetically.
-$servers = Get-ADComputer -Filter * -SearchBase $SearchBaseOU | Select-Object -ExpandProperty Name | Sort
+$servers = Get-ADComputer -Filter * -SearchBase $SearchBaseOU | Select-Object -ExpandProperty Name | Sort-Object
 
 # For every computer object returned from Get-ADComputer...
 foreach ( $server in $servers )
@@ -15,7 +15,7 @@ foreach ( $server in $servers )
         
         # ...get a list of Windows services running on the computer object and look for services that use the $SearchForThisName account to authenticate.  
         # ...ignore errors returned from stale computer objects and non-Windows servers.
-        $output = Get-WmiObject -ComputerName $server win32_service -EA SilentlyContinue | where Startname -like $SearchForThisName | Select Name, Startname
+        $output = Get-WmiObject -ComputerName $server win32_service -EA SilentlyContinue | Where-Object Startname -like $SearchForThisName | Select-Object Name, Startname
         
         # ...tell me how many services you found that use the "$SearchForThisName" user account to authenticate.
         Write-Host $server "has" $output.Count "instances of $SearchForThisName."
