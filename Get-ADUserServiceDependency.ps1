@@ -2,7 +2,7 @@
 $SearchBaseOU = "OU=hurp,OU=durp,OU=twiddly,DC=derrmain,DC=dotlocal"
 
 # Provide a username to search.
-$SearchForThisName = "chuck*"
+$SearchForThisName = "squanch*"
 
 # Recursively parse the $SearchBaseOU OU for computer objects, return only their name (no header) using "ExpandProperty", and sort alphabetically.
 $servers = Get-ADComputer -Filter * -SearchBase $SearchBaseOU | Select-Object -ExpandProperty Name | Sort
