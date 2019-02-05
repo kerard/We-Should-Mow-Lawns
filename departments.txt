@@ -1,0 +1,15 @@
+acc
+br
+ci
+disp
+eng
+hr
+it
+kp
+mnt
+mkt
+ops
+pkg
+safe
+sale
+whse
