@@ -17,18 +17,18 @@ $vm_name = @()
 
 do 
 	{
-		$input = (Read-Host "Please enter the computer name (Leave blank and hit enter when done): ")
+		$input = (Read-Host "Please enter the computer name (Leave blank and hit enter when done)")
 		if ($input -ne '') {$vm_name += $input}
 	}
 until ($input -eq '')
 
 # Prompt for VM VLAN from user.
 
-$vm_vlan_id = Read-Host "Please provide a VLAN for the new virtual machine: "
+$vm_vlan_id = Read-Host "Please provide a VLAN for the new virtual machine"
 
 # Specify the amount of virtual CPU cores for the VM.
 
-$vm_processor_count = Read-Host "Please provide amount of CPU cores for the new virtual machine: "
+$vm_processor_count = Read-Host "Please provide amount of CPU cores for the new virtual machine"
 
 # Specify the amount of virtual RAM for the VM.
 
@@ -50,7 +50,7 @@ $vm_path = "F:\hyperv"
 
 # Specify the location of your "golden image" virtual hard disk.
 
-$source_boot_vhdx = "C:\Users\sandbox\Documents\template_gui_dyn.vhdx"
+$source_boot_vhdx = "C:\Users\sandbox\Documents\library\template_gui_dyn.vhdx"
 
 # Specify the location of your Hyper-V Guest Additions disk.
 # This removes a step if you need to install Guest Additions after the VM comes online.
@@ -93,7 +93,7 @@ Write-Output "Copy the boot disk." | timestamp
 
 # sleep 15
 
-copy $source_boot_vhdx $vm_copy_path_dest\$vm-boot.vhdx
+Copy-Item $source_boot_vhdx $vm_copy_path_dest\$vm-boot.vhdx
 
 # Attach the boot disk to the VM
 

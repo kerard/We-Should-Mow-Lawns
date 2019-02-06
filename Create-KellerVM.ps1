@@ -11,15 +11,15 @@ Write-Output "Setup VM Parameters." | timestamp
 
 # Prompt for VM name from user.
 
-$vm_name = Read-Host "Please provide a name for the new virtual machine: "
+$vm_name = Read-Host "Please provide a name for the new virtual machine"
 
 # Prompt for VM VLAN from user.
 
-$vm_vlan_id = Read-Host "Please provide a VLAN for the new virtual machine: "
+$vm_vlan_id = Read-Host "Please provide a VLAN for the new virtual machine"
 
 # Specify the amount of virtual CPU cores for the VM.
 
-$vm_processor_count = Read-Host "Please provide amount of CPU cores for the new virtual machine: "
+$vm_processor_count = Read-Host "Please provide amount of CPU cores for the new virtual machine"
 
 # Specify the amount of virtual RAM for the VM.
 
@@ -41,12 +41,12 @@ $vm_path = "F:\hyperv"
 
 # Specify the location of your "golden image" virtual hard disk.
 
-$source_boot_vhdx = "C:\Users\sandbox\Documents\template_gui.vhdx"
+$source_boot_vhdx = "C:\Users\sandbox\Documents\library\template_gui.vhdx"
 
 # Specify the location of your Hyper-V Guest Additions disk.
 # This removes a step if you need to install Guest Additions after the VM comes online.
 
-$hyperv_integration_disk = "C:\Users\sandbox\Documents\vmguest.iso"
+$hyperv_integration_disk = "C:\Users\sandbox\Documents\library\vmguest.iso"
 
 # There is no need to change the $vm_copy_path_dest value.
 # This variable creates a full path to the VM folder that can be used as a destination for copying files.
@@ -76,9 +76,9 @@ Set-VMProcessor -VMName $vm_name -Count $vm_processor_count
 
 Write-Output "Copy the boot disk." | timestamp
 
-sleep 15
+Start-Sleep 15
 
-copy $source_boot_vhdx $vm_copy_path_dest\$vm_name-boot.vhdx
+Copy-Item $source_boot_vhdx $vm_copy_path_dest\$vm_name-boot.vhdx
 
 # Attach the boot disk to the VM
 
