@@ -24,7 +24,7 @@ until ($input -eq '')
 
 # Prompt for VM VLAN from user.
 
-$vm_vlan_id = Read-Host "Please provide a VLAN for the new virtual machine"
+# $vm_vlan_id = Read-Host "Please provide a VLAN for the new virtual machine"
 
 # Specify the amount of virtual CPU cores for the VM.
 
@@ -55,7 +55,7 @@ $source_boot_vhdx = "C:\Users\sandbox\Documents\library\template_gui_dyn.vhdx"
 # Specify the location of your Hyper-V Guest Additions disk.
 # This removes a step if you need to install Guest Additions after the VM comes online.
 
-$hyperv_integration_disk = "C:\Users\sandbox\Documents\vmguest.iso"
+$hyperv_integration_disk = "C:\Users\sandbox\Documents\library\vmguest.iso"
 
 ###################################
 # End variable declaration block. #
