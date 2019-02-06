@@ -7,9 +7,6 @@ foreach ( $type in $disktype )
         foreach ( $deptshortname in $deptname )
             {
                 $fullpath = $rootmount + "\" + "cinco_mail_" + $type + "_" + $deptshortname
-                
-                # Insert any verb logic here using the "fullpath" variable.
-                
                 md $fullpath
             }
     }
