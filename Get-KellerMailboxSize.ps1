@@ -1,0 +1,1 @@
+Get-MailboxDatabase | Get-MailboxStatistics | Sort totalitemsize -desc | ft displayname, totalitemsize, itemcount, name | Out-File "c:\source\EXMS1_mailbox_size_report.txt"
