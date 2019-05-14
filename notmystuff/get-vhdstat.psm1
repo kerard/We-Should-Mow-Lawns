@@ -17,9 +17,11 @@ function Get-VHDStat {
                         Name = $VM.name
                         Type = $VHD.VhdType
                         Path = $VHD.Path
-                        'Total(GB)' = [math]::Round($VHD.Size/1GB)
-                        'Used(GB)' = [math]::Round($VHD.FileSize/1GB)
-                        'Free(GB)' =  [math]::Round($VHD.Size/1GB- $VHD.FileSize/1GB)
+                        Logical = $VHD.LogicalSectorSize
+                        Physical = $VHD.PhysicalSectorSize
+                        'Total' = [math]::Round($VHD.Size/1GB)
+                        'Used' = [math]::Round($VHD.FileSize/1GB)
+                        'Free' =  [math]::Round($VHD.Size/1GB- $VHD.FileSize/1GB)
                      }
                 }
         }
