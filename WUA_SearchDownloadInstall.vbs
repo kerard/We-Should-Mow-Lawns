@@ -1,4 +1,3 @@
-' this is not my work.  navigate here for source: https://docs.microsoft.com/en-us/windows/desktop/wua_sdk/searching--downloading--and-installing-updates
 Set updateSession = CreateObject("Microsoft.Update.Session")
 updateSession.ClientApplicationID = "MSDN Sample Script"
 
