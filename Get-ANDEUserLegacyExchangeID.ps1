@@ -1,0 +1,1 @@
+﻿get-aduser -filter * | ? {$_.LegacyExchangeDN -like '/o=Andersons/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=12b34de847a54aba801bb2cb2ba84668-Bill Trust3'}
