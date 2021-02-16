@@ -1,4 +1,4 @@
-﻿# Save-Module -Name VMware.PowerCLI -Path C:\Users\mw148186_el\Documents\Powershell
+﻿# Save-Module -Name VMware.PowerCLI -Path C:\Users\%USER%\Documents\Powershell
 # Install-Module -Name VMware.PowerCLI
 Import-Module VMware.VimAutomation.PCloud
 

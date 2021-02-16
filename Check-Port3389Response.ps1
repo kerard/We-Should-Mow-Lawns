@@ -1,1 +1,0 @@
-get-vm | foreach { Test-NetConnection -ComputerName $_.Name -Port 3389 }
