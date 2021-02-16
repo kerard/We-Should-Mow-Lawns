@@ -1,6 +1,6 @@
 ﻿$userinput = Read-Host "Please provide locked user name"
 
-# $lockeduser = '*Matt_Bundt_Admin*'
+# $lockeduser = '*Matt_Cinco_GreatJob*'
 
 # $lockeduser = '*$userinput*'
 

@@ -1,4 +1,4 @@
-﻿$content = Get-Content C:\Users\mw148186\Desktop\element_users_test.txt
+﻿$content = Get-Content C:\toolbox\file.txt
 
 foreach ($user in $content)
     {
