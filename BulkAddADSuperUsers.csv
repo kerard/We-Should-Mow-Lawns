@@ -1,3 +1,0 @@
-FirstName,Lastname,Name,SamAccountName,Description,Path,InitialGroupMembership
-Domain,Overlord,Domain Overlord,domain.overlord,Lord Over All Hansy Boys,"OU=Administration,OU=Thanks Cinco,DC=cinco,DC=local",it-super_gs
-Domain,Joiner,Domain Joiner,domain.joiner,Makes Boys Hansy,"OU=Administration,OU=Thanks Cinco,DC=cinco,DC=local",it-super_gs

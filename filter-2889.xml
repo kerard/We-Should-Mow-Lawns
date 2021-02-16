@@ -1,5 +1,0 @@
-﻿<QueryList> 
-  <Query Id="0" Path="Directory Service"> 
-    <Select Path="Directory Service">*[System[Provider[@Name='Microsoft-Windows-ActiveDirectory_DomainService'] and (EventID=2889)]]</Select> 
-  </Query> 
-</QueryList>
