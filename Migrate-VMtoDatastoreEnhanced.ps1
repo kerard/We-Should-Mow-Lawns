@@ -8,7 +8,7 @@ if (!($credential)) {$credential = get-credential}
 connect-viserver -server 'vcenter.andent.andersonsinc.com' -credential $credential
 
 # Create a text file containing a list of VMs and specify the path.
-$vmList = Get-Content -Path "C:\Users\mw148186\OneDrive - The Andersons, Inc\Project - DR Tiering\Non-Production VMs.txt"
+$vmList = Get-Content -Path "C:\Users\mw148186\OneDrive - The Andersons, Inc\Project - DR Tiering\COB-PURE-DSC-RPO-DNR.txt"
 
 # Provide text pattern (Datastore Cluster name) to identify the target datastore.  Paste value from list between $targetDatastorePattern quotes.
 # Possible values are...
